@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+	 	<title>Game</title>
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+	</head>	
+	<body>
+		<div class="container">
+			<h1 class="container__title">How Much Would You Like <span class="colortext">To Borrow?</span></h1>
+			<div class="calculator">
+				<div class="container-setting">
+					<div class="calculator-setting">
+					<div class="borrow-amount">
+					<div class="slidecontainer">
+            <h3 class="slidecontainer__subtitle">Borrow Amount</h3>
+            <input id="borrowRange" class="slider" type="range" min="1000" max="20000" value="10000" step="100">
+            <div class="min-max">
+							<p>£1000</p>
+							<p>£20k</p>
+            </div>
+						<p class="slidecontainer__total">£<span id="borrowOutput">10,000.00</span></p>
+					</div>
+				</div>
+					<div class="payment-period">
+						<div class="slidecontainer">
+              <h3 class="slidecontainer__subtitle">Payment Period</h3>
+              <input id="paymentRange" class="slider" type="range" min="1" max="15" value="5" step="1">
+							<div class="min-max">
+								<p>1 Year</p>
+								<p>15 Years</p>
+              </div>
+							<p class="slidecontainer__total"><span id="paymentOutput">5</span> Years</p>
+						</div>
+					</div>
+					<div class="interest-rate">
+						<div class="deposit-date">
+							<p class="deposit-date__date">Deposit Date</p>
+						</div>
+						<div class="rate-and-calendare">
+							<p class="rate-and-calendare__rate"><span id="rate">4,95</span>%</p>
+							<div class="flatpickr">
+								<input class="input-date" type="text" value="2024-01-19" data-input> <!-- input is mandatory -->
+								<a class="input-button" title="toggle" data-toggle>
+        					<svg width="30px" height="30px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        						<g id="SVGRepo_iconCarrier"> 
+        						<path d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+        					</svg>
+    						</a>
+    					</div>
+						</div>
+					</div>
+					<div class="format-payment">
+						<div class="radio">
+							<input class="custom-radio" type="radio" id="radio-1" name="payment" value="deposit">
+						  <label for="radio-1">Deposit Bank Transfer</label>
+						</div>
+						<div class="radio">
+						  <input class="custom-radio" type="radio" id="radio-2" name="payment" value="cash">
+						  <label for="radio-2">Cash</label>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div class="container-total">
+				<div class="total">
+					<div class="mounth-payment">
+						<h2 id="monthPayment" class="mounth-payment__title">Monthly Payment</h2>
+						<p class="mounth-payment__payment">£<span id="mounth-payment__payment">188.48</span></p>
+						<p class="mounth-payment__fees">Fees include</p>
+					</div>
+					<div class="borrowing-repay">
+						<div class="borrowing">
+							<h3 class="borrowing__title">borrowing</h3>
+							<p class="borrowing__text">£<span id="borrowing__text">10,000.00</p>
+						</div>
+						<div class="to-repay">
+						<h3 class="to-repay__title">to repay</h3>
+						<p class="to-repay__text">£<span id="to-repay__text">11,308.80</p>
+						</div>
+					</div>
+					<button class="borrowing-repay__btn">send form</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script>
+			flatpickr(".flatpickr",{wrap:true});
+		</script>
+	</body>
+</html>
