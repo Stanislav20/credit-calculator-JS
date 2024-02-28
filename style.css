@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;600;700;800;900&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Raleway:wght@400;600;700;800;900&display=swap');
 
 * {
 	margin: 0;
@@ -7,7 +7,6 @@
 
 body {
   margin: auto;
-  /*margin-bottom: 50px;*/
   max-width: 1440px;
   background: #fff;
 }
@@ -40,7 +39,6 @@ body {
 
 .container-setting {
 	max-width: 720px;
-	/*border: 1px solid red;*/
 	margin: auto;
 }
 
@@ -54,7 +52,7 @@ body {
 }
 
 .slidecontainer {
-    width: 535px; /* Width of the outside container */
+  width: 535px;
 }
 
 .payment-period {
@@ -70,50 +68,44 @@ body {
 	margin-bottom: 16px;
 }
 
-/* The slider itself */
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none;
   /*appearance: none;*/
-  width: 535px; /* Full-width */
-  height: 8px; /* Specified height */
-  background: #F0F0F0; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  width: 535px;
+  height: 8px;
+  background: #F0F0F0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
   transition: opacity .2s;
   border-radius: 15px;
-  /*overflow: hidden;*/
+
   margin-bottom: 24px;
 }
 
-/* Mouse-over effects */
 .slider:hover {
-	opacity: 1; /* Fully shown on mouse-over */
+	opacity: 1;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-	-webkit-appearance: none; /* Override default look */
+	-webkit-appearance: none;
 	appearance: none;
-	width: 25px; /* Set a specific slider handle width */
-	height: 25px; /* Slider handle height */
+	width: 25px;
+	height: 25px;
 	border-radius: 50%;
-	background: #54D4A0; /* Green background */
-	cursor: pointer; /* Cursor on hover */
-	/*box-shadow: -200px 0 0 185px #54D4A0;*/
+	background: #54D4A0;
+	cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
 	/*-webkit-appearance: none; /* Override default look */
 	/*appearance: none;*/
-	width: 25px; /* Set a specific slider handle width */
-	height: 25px; /* Slider handle height */
-	background: #54D4A0; /* Green background */
-	cursor: pointer; /* Cursor on hover */
-	/*box-shadow: -200px 0 0 185px #54D4A0;*/
+	width: 25px;
+	height: 25px;
+	background: #54D4A0;
+	cursor: pointer;
 	border-radius: 50%;
 }
-
 
 .min-max {
 	display: flex;
@@ -144,6 +136,10 @@ body {
 	font-weight: 600;
 }
 
+.interest-rate {
+	margin-bottom: 62px;
+}
+
 .deposit-date {
 	border-bottom: 3px solid #000;
 	position: relative;
@@ -162,7 +158,6 @@ body {
 	align-items: center;
 	padding: 0 37px;
   padding-top: 34px;
-	margin-bottom: 62px;
 }
 
 .rate-and-calendare__rate {
@@ -178,7 +173,6 @@ body {
   position: relative;
   width: 195px;
   height: 53px;
-  /* margin: 0 auto; */
 }
 
 .input-date {
@@ -260,19 +254,17 @@ body {
  
 .container-total {
 	width: 630px;
-	/*border: 1px solid red;*/
 	margin: auto;
 	margin-top: 77px;
 } 
 
-.total{
-	/* width: 636px; */
+.total {
 	text-align: center;
 	margin: auto;
 }
 
 .mounth-payment {
-	margin-bottom: 115px;
+	margin-bottom: 60px;
 }
 
 .mounth-payment__title {
@@ -309,7 +301,6 @@ body {
 
 .borrowing, .to-repay {
 	width: 288px;
-	/* height: 120px; */
 	border-radius: 4px;
 	padding-top: 24px;
   padding-bottom: 18px;
@@ -344,7 +335,9 @@ body {
 }
 
 .borrowing-repay__btn {
-	padding: 17px 240px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	width: 100%;
 	border-radius: 4px;
 	border: 1px solid #54D4A0;
 	background-color: #fff;
@@ -355,7 +348,6 @@ body {
 	font-weight: 600;
 	letter-spacing: 4px;
 	text-transform: uppercase;
-	/* margin-top: 30px; */
 	cursor: pointer;
 }
 
@@ -365,15 +357,83 @@ body {
 	transition: .2s;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1367px) {
+	.container {
+		padding-top: 15px;
+	}
+	
+	.container__title {
+    font-size: 40px;
+		margin-bottom: 35px;
+	}
+
+	.container-setting, .container-total {
+		width: 40%;
+	}
+	
+	.borrow-amount {
+    margin-bottom: 40px;
+	}
+
+	.payment-period {
+    margin-bottom: 70px;
+	}
+
+	.calculator-setting, .slidecontainer, .slider {
+		width: 100%;
+	}
+	
+	.slidecontainer__total {
+    font-size: 35px;
+	}
+
+	.interest-rate {
+    margin-bottom: 10px;
+	}
+
+	.radio {
+		margin-top: 20px;
+	}
+	 
+	.container-total {
+		margin: auto;
+	}
+	
+	.mounth-payment__payment {
+  	font-size: 52px;
+	}
+
+	.borrowing {
+		margin-right: 9%;
+	}
+	
+	.borrowing__title, .to-repay__title {
+		font-size: 14px;
+	}
+	
+	.borrowing__text, .to-repay__text {
+		font-size: 33px;
+	}
+	
+	.borrowing-repay__btn {
+		padding: 17px;
+	}
+}
+
+@media (max-width: 1000px) {
 	.calculator {
 		display: block;
 	}
 }
 
-@media (max-width: 749px) {
+@media (max-width: 900px) {
+	.container {
+		margin-bottom: 50px;
+	}
+
 	.container-setting, .container-total {
 		width: 80%;
+		margin-bottom: 50px;
 	}
 
 	.calculator-setting {
@@ -381,7 +441,6 @@ body {
 	}
 	
 	.borrow-amount {
-		/*width: 95%;*/
 		margin-bottom: 77px;
 	}
 	
@@ -396,11 +455,10 @@ body {
 	.borrowing, .to-repay {
 		margin: auto;
 		margin-bottom: 31px;
-		padding-top: 1px;
+		width: 100%;
 	}
 	
 	.borrowing-repay__btn {
-		padding: 17px 67px;
 		margin-top: 0;
 	}
 }
@@ -409,6 +467,7 @@ body {
 	.container {
 		width: 85%;
 		margin: auto;
+		margin-bottom: 50px;
 		padding-top: 66px;
 	}
 	
@@ -418,7 +477,6 @@ body {
 	}
 		
 	.calculator {
-		/*width: 332px;*/
 		width: 100%;
 		margin: auto;
 		padding-bottom: 0;
@@ -427,8 +485,6 @@ body {
 	.container-setting, .container-total {
 		width: 100%;
 	}
-	
-
 	
 	.calculator-setting {
 		width: 100%;
@@ -483,14 +539,13 @@ body {
     font-weight: 700;
 		margin-bottom: 10px;
 	}
-	
+
 	.borrowing-repay {
 		display: block;
 		margin-bottom: 29px;
 	}
 	
 	.borrowing, .to-repay {
-		margin: auto;
 		margin-bottom: 23px;
 		padding-top: 24px;
 		padding-bottom: 26px;
@@ -498,9 +553,5 @@ body {
 	
 	.borrowing__text, .to-repay__text {
 		font-size: 35px;
-	}
-	
-	.borrowing-repay__btn {
-		padding: 17px 68px;
 	}
 }
